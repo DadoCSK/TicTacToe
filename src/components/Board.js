@@ -1,10 +1,10 @@
 import React from "react";
 import Square from "./Square";
-import './Board.css'
+import './style.css'
 
-const Board = () => {
+const Board = (onClick) => {
   const createSquare = (i) => {
-    return <Square value={i} />;
+    return <Square value={i} onClick={onClick} />;
   };
 
   return (
@@ -56,7 +56,7 @@ const Board = () => {
     </div>
 
     <div id="board5">
-      <div className="board-row">
+      <div className="board-row ">
         {createSquare(0)}
         {createSquare(1)}
         {createSquare(2)}

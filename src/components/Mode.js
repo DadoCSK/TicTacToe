@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './Mode.css';
 
 const Mode = () => {
 
