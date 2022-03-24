@@ -1,11 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { NavLink } from 'react-router-dom';
 
 const HomePage = () => {
 
     return (
-        <div>
-        <NavLink to='/game'>Play</NavLink>
+
+        <div >
+        <NavLink className="home glitch" to='/game'>Play</NavLink>
         </div>
     )
 }

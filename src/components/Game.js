@@ -37,9 +37,9 @@ const Game = ({value}) => {
         <div className={`style${value}`}>
         <Board squares={tiles} onClick={handleClick}/>
         <button onClick={reset}>Reset</button>
-        <p>
+        
           {winner ? "Winner: " + winner : "Next Player: " + xO}
-            </p>
+            
         </div>
     )
 }

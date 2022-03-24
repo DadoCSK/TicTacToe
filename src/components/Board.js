@@ -1,6 +1,6 @@
 import React from "react";
 import Square from "./Square";
-import './style.css'
+import '../style.css';
 
 const Board = ({squares, onClick}) => {
   return (

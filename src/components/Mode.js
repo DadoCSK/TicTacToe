@@ -32,7 +32,7 @@ const Mode = () => {
 
         <div>
             
-            <h1>CHOOSE MODE</h1>
+            <h1 className="glitch">CHOOSE MODE</h1>
             <ul>
                <li ref={gametype1} value="9" onClick = {() =>{
                    setShow(true);
@@ -69,14 +69,8 @@ const Mode = () => {
 
             }} >KLIKNI ME</button>
             
-            
-
             {show ? <Game value={vrednost}/> : null}
          
-            {/* {show3?<Game value={9}/>:null}
-            {show4? <Game value={16}/>:null}
-            {show5? <Game value={25}/>:null}
-            {showCustom ? <Game value={input*input2}/> : null} */}
         </div>
     )
 }
