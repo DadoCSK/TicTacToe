@@ -1,22 +1,32 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import Game from '../components/Game';
 
 const Mode = () => {
 
-    const [show3, setShow3] = useState(false);
-    const [show4, setShow4] = useState(false);
-    const [show5, setShow5] = useState(false);
-    const [isActive,setActive] = useState(true);
+    const [show, setShow] = useState(false);
+    const [showCustom, setShowCustom] = useState(false);
+    const [input, setInput] = useState('');
+    const [input2,setInput2] = useState('');
+    const gametype1 = useRef(null);
+    const gametype2 = useRef(null);
+    const gametype3 = useRef(null);
+    const [vrednost, setVrednost] = useState(null);
+    const [classC, setClassC] = useState('board3');
 
-    const onClick3 = () => {
-        setShow3(true);
+
+    const onClick = () => {
+        return(
+        <>
+        <input value={input} onChange={(e)=>{setInput(e.target.value)}}/>
+        <input value={input2} onChange={(e)=>{setInput2(e.target.value)}}/>
+        </>
+        )
+        
     }
-    const onClick4 = () => {
-        setShow4(true);
+    const onClickCustom = () => {
+        
+        setShowCustom(true);
     }
-    const onClick5 = () => {
-        setShow5(true);
-    }
-    
 
     return (
 
@@ -24,31 +34,50 @@ const Mode = () => {
             
             <h1>CHOOSE MODE</h1>
             <ul>
-               <li onClick={onClick3}>3x3</li>
-               <li onClick={onClick4}>4x4</li>
-               <li onClick={onClick5}>5x5</li>
+               <li ref={gametype1} value="9" onClick = {() =>{
+                   setShow(true);
+                   setVrednost(gametype1.current.value);
+                   console.log(vrednost)}}>3x3</li>
+               <li ref={gametype2} value="16" onClick = {() =>{
+                   setShow(true);
+                   setVrednost(gametype2.current.value);
+                   console.log(vrednost)}}>4x4</li>
+               <li ref={gametype3} value="25" onClick = {() =>{
+                   setShow(true);
+                   setVrednost(gametype3.current.value);
+                   console.log(vrednost)}}>5x5</li>
+               <li onClick={onClick}>Custom</li>
             </ul>
 
-            {show3? <Text3/>:null}
-            {show4? <Text4/>:null}
-            {show5? <Text5/>:null}
-        </div>
-    )
-}
+            
 
-const Text3=() =>{
-    return (
-        <p>TEXT 3</p>
-    )
-}
-const Text4=() =>{
-    return (
-        <p>TEXT 4</p>
-    )
-}
-const Text5=() =>{
-    return (
-        <p>TEXT 5</p>
+            {/* <select ref={gametype} id="game_type">
+				<option value="9">3 x 3 Board</option>
+				<option value="16">4 x 4 Board</option>
+				<option value="25">5 x 5 Board</option>
+			</select> */}
+
+            <button className={classC} onClick={() =>{
+
+                setClassC('board4');
+                setShow(true);
+                setVrednost(gametype1.current.value);
+                const nesto = parseInt(gametype1.current.value)
+                console.log(vrednost)
+                console.log(nesto)
+                
+
+            }} >KLIKNI ME</button>
+            
+            
+
+            {show ? <Game value={vrednost}/> : null}
+         
+            {/* {show3?<Game value={9}/>:null}
+            {show4? <Game value={16}/>:null}
+            {show5? <Game value={25}/>:null}
+            {showCustom ? <Game value={input*input2}/> : null} */}
+        </div>
     )
 }
 
