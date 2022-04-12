@@ -100,7 +100,7 @@ export function calculateWinner(squares) {
         squares[a] &&
         squares[a] === squares[b] &&
         squares[a] === squares[c] &&
-		squares[a] === squares[d]
+		    squares[a] === squares[d]
       ) {
         return squares[a];
       }

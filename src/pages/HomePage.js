@@ -5,8 +5,8 @@ const HomePage = () => {
 
     return (
 
-        <div >
-        <NavLink className="home glitch" to='/game'>Play</NavLink>
+        <div>
+        <NavLink className="glitch home" to='/game'>Play</NavLink>
         </div>
     )
 }
