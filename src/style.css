@@ -8,10 +8,9 @@
   src: url(fonts/ARCADECLASSIC.TTF);
 }
 .style9{
-  border: 4px solid darkblue;
-  border-radius: 10px;
-  width: 250px;
-  height: 250px;
+  border:none;
+  width: 500px;
+  height: 500px;
   margin: 0 auto;
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
@@ -49,6 +48,7 @@
   /* background-image: url(img/retrowave.jpg); */
   width:100%;
   height:100vh;
+  background-color:gray;
 }
 
 .home{
@@ -122,4 +122,10 @@
 ul{
   list-style-type: none;
   cursor: pointer;
+}
+.square{
+  background-color:transparent;
+  border-top: none;
+  border-left: none;
+
 }
