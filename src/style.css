@@ -33,31 +33,26 @@
     display: grid;
     grid-template: repeat(5, 1fr) / repeat(5, 1fr);
 }
-.board3{
-
-    background-color: red;
-}
-.board4{
-    background-color:blue;
-}
 .page{
 
   display:grid;
   place-items: center;
   color: white;
-  /* background-image: url(img/retrowave.jpg); */
   width:100%;
   height:100vh;
-  background-color:gray;
+}
+.hide{
+  display:none;
 }
 
 .home{
   font-family:Retro;
   font-size:10rem !important;
   color: white;
-  /* display:grid;
-  place-items: center; */
   text-decoration: none;
+  /* background: url(img/arcadev2.png) no-repeat center center; */
+  background: url(img/arcade_screen.png) no-repeat center center;
+  background-size: 500px; 
 }
 #myVideo {
   width: 100vw;
@@ -127,5 +122,4 @@ ul{
   background-color:transparent;
   border-top: none;
   border-left: none;
-
 }
