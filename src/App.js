@@ -17,9 +17,9 @@ function App() {
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<HomePage/>}/>
-      <Route path="/play" element={<PlayPage/>}/>
-      <Route path="/game" element={<GamePage/>}/>
-      <Route path="/login" element={<LoginPage/>}/>
+      <Route path="https://main--luxury-flan-b8be60.netlify.app/play" element={<PlayPage/>}/>
+      <Route path="https://main--luxury-flan-b8be60.netlify.app/game" element={<GamePage/>}/>
+      <Route path="https://main--luxury-flan-b8be60.netlify.app/login" element={<LoginPage/>}/>
     </Routes>
   </BrowserRouter> 
   </div>
