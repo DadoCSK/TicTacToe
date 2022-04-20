@@ -4,7 +4,7 @@ import arcade from "./../img/arcadev3.png";
 const HomePage = () => {
   return (
     <main className="home_wrap">
-      <img src={arcade} usemap="#image-map" />
+      <img src={arcade} usemap="#image-map" alt="arcade" />
 
       <map name="image-map">
         <area
