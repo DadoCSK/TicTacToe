@@ -5,14 +5,10 @@ const Mode = () => {
 
     const [show, setShow] = useState(false);
     const [activeClass, setActiveClass] = useState(false);
-    const [showCustom, setShowCustom] = useState(false);
-    const [input, setInput] = useState('');
-    const [input2,setInput2] = useState('');
     const gametype1 = useRef(null);
     const gametype2 = useRef(null);
     const gametype3 = useRef(null);
     const [vrednost, setVrednost] = useState(null);
-    const [classC, setClassC] = useState('board3');
 
     const toggleClass = () => {
         setActiveClass(!activeClass);

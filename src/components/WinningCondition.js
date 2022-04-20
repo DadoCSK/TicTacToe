@@ -1,9 +1,7 @@
-import React from "react";
-import Mode from "../components/Mode";
 
 export function calculateWinner(squares) {
   var lines = [];
-  if (squares.length == 9) {
+  if (squares.length === 9) {
     lines = [
       [0, 1, 2],
       [3, 4, 5],
@@ -26,7 +24,7 @@ export function calculateWinner(squares) {
       }
     }
     return null;
-  }else if (squares.length == 16) {
+  }else if (squares.length === 16) {
     lines = [
     [0, 1, 2],
 	  [1, 2, 3],
@@ -66,7 +64,7 @@ export function calculateWinner(squares) {
     }
     return null;
 
-  }else if (squares.length == 25) {
+  }else if (squares.length === 25) {
     lines = [
     [0, 1, 2, 3],
 	  [1, 2, 3, 4],
