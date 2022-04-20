@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
 import Game from '../components/Game';
-import { NavLink } from 'react-router-dom';
 
 const Mode = () => {
 
@@ -18,26 +17,15 @@ const Mode = () => {
     const toggleClass = () => {
         setActiveClass(!activeClass);
     }
-
-    const onClick = () => {
-        return(
-        <>
-        <input value={input} onChange={(e)=>{setInput(e.target.value)}}/>
-        <input value={input2} onChange={(e)=>{setInput2(e.target.value)}}/>
-        </>
-        )
-        
+    const cMode = () => {
+        setShow(false);
+        toggleClass();
     }
-    const onClickCustom = () => {
-        
-        setShowCustom(true);
-    }
-
     return (
 
         <div>
-            <div className={activeClass? 'hide' : 'glitch'}>
             <div className="layout" >
+            <div className={activeClass? 'hide' : 'glitch'}>
             <h1>CHOOSE MODE</h1>
             <ul>
                <li ref={gametype1} value="9" onClick = {() =>{
@@ -55,31 +43,16 @@ const Mode = () => {
                    setVrednost(gametype3.current.value);
                    toggleClass()
                    }}>5x5</li>
-               <li onClick={onClick}>Custom</li>
             </ul>
             </div>
-</div>
-            
-
-            {/* <select ref={gametype} id="game_type">
-				<option value="9">3 x 3 Board</option>
-				<option value="16">4 x 4 Board</option>
-				<option value="25">5 x 5 Board</option>
-			</select> */}
-
-            {/* <button className={classC} onClick={() =>{
-
-                setClassC('board4');
-                setShow(true);
-                setVrednost(gametype1.current.value);
-                const nesto = parseInt(gametype1.current.value)
-                
-                
-
-            }} >KLIKNI ME</button> */}
-            
+        </div>
+        <div className="center">
             {show ? <Game value={vrednost}/> : null}
-         
+
+            <button onClick={cMode} className={activeClass?'btnReset':'hide'}>
+          Choose mode
+        </button>
+         </div>
         </div>
     )
 }

@@ -7,28 +7,31 @@
   font-family: "Retro";
   src: url(fonts/ARCADECLASSIC.TTF);
 }
+.home_wrap{
+  width: 100%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
 .style9{
-  border:none;
-  width: 500px;
-  height: 500px;
+  width: 40rem;
+  height: 40rem;
   margin: 0 auto;
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 }
 .style16{
-  border: 4px solid darkblue;
-  border-radius: 10px;
-  width: 250px;
-  height: 250px;
+  width: 500px;
+  height: 500px;
   margin: 0 auto;
   display: grid;
   grid-template: repeat(4, 1fr) / repeat(4, 1fr);
 }
 .style25{
-    border: 4px solid darkblue;
-    border-radius: 10px;
-    width: 250px;
-    height: 250px;
+    width: 500px;
+    height: 500px;
     margin: 0 auto;
     display: grid;
     grid-template: repeat(5, 1fr) / repeat(5, 1fr);
@@ -41,18 +44,22 @@
   width:100%;
   height:100vh;
 }
-.hide{
-  display:none;
-}
 
+.container{
+
+  display:grid;
+  place-items: center;
+  color: white;
+  width:100%;
+  height:100vh;
+  background: url(img/arcade_screen.png) no-repeat center center;
+  background-size: 70%;
+}
 .home{
   font-family:Retro;
-  font-size:10rem !important;
+  font-size:10rem;
   color: white;
   text-decoration: none;
-  /* background: url(img/arcadev2.png) no-repeat center center; */
-  background: url(img/arcade_screen.png) no-repeat center center;
-  background-size: 500px; 
 }
 #myVideo {
   width: 100vw;
@@ -64,7 +71,7 @@
   z-index: -1;
 }
 .glitch {
-  font-size: 5rem;
+  /* font-size: 5rem; */
   font-weight: bold;
   text-transform: uppercase;
   position: relative;
@@ -117,9 +124,37 @@
 ul{
   list-style-type: none;
   cursor: pointer;
+  text-align: center;
 }
 .square{
+  font-family: Retro;
+  font-size: 6rem;
   background-color:transparent;
-  border-top: none;
-  border-left: none;
+  border: 1px solid white;
+  color: white;
+  width:100%;
+  
+}
+.btnReset{
+  font-family: Retro;
+  font-size:3rem;
+  background-color: transparent;
+  color: white;
+  border: none;
+
+}
+.nextPlayer{
+  font-family: Retro;
+  font-size:2em;
+  color: white;
+}
+.winner{
+  font-family: Retro;
+  text-align: center;
+  font-size:5rem;
+  color: white;
+}
+.center{
+  display:grid;
+  
 }

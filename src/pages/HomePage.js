@@ -1,50 +1,30 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import arcade from "./../img/arcadev2.png";
+import React from "react";
+import arcade from "./../img/arcadev3.png";
 
 const HomePage = () => {
- 
-    const [activeClass, setActiveClass] = useState(false);
-
-    const switchScreen = () => {
-        setActiveClass(!activeClass);
-        
-    }
-
-    const nesto = () => {
-        console.log("test")
-    }
- 
- 
-    return (
-        <div>
-      <NavLink className={activeClass?'glitch home':'hide'} to="/game">
-        Play
-      </NavLink>
-    <div className={activeClass? 'hide': 'img'}>
-      <img src={arcade} useMap="#image-map" />
+  return (
+    <main className="home_wrap">
+      <img src={arcade} usemap="#image-map" />
 
       <map name="image-map">
         <area
           target=""
           alt="coin"
           title="coin"
-          href="#"
-          coords="73,336,95,313"
+          href="/play"
+          coords="194,429,160,400"
           shape="rect"
-          onClick={switchScreen}
         />
         <area
           target=""
-          alt="coin2"
-          title="coin2"
-          href="/game"
-          coords="116,314,137,336"
+          alt="coin"
+          title="coin"
+          href="/play"
+          coords="213,400,244,429"
           shape="rect"
         />
       </map>
-      </div>
-</div>
+    </main>
   );
 };
 export default HomePage;
