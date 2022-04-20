@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import {BrowserRouter , Route, Routes, NavLink} from 'react-router-dom';
-import arcadeS from "./../img/arcade_screen.png"
+import React from 'react';
+import {NavLink} from 'react-router-dom';
 
 
 const PlayPage = () => {

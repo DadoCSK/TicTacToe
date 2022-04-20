@@ -16,22 +16,22 @@
 }
 
 .style9{
-  width: 40rem;
-  height: 40rem;
+  width: 30rem;
+  height: 30rem;
   margin: 0 auto;
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 }
 .style16{
-  width: 500px;
-  height: 500px;
+  width: 30rem;
+  height: 30rem;
   margin: 0 auto;
   display: grid;
   grid-template: repeat(4, 1fr) / repeat(4, 1fr);
 }
 .style25{
-    width: 500px;
-    height: 500px;
+    width: 30rem;
+    height: 30rem;
     margin: 0 auto;
     display: grid;
     grid-template: repeat(5, 1fr) / repeat(5, 1fr);
@@ -71,10 +71,9 @@
   z-index: -1;
 }
 .glitch {
-  /* font-size: 5rem; */
   font-weight: bold;
   text-transform: uppercase;
-  position: relative;
+  /* position: relative; */
   top: 50px;
   text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
     0.025em 0.04em 0 #fffc00;
@@ -111,12 +110,12 @@
       -0.04em -0.025em 0 #fffc00;
   }
 }
+
 .layout{
   font-family: Retro;
   font-size:5rem;
   display:grid;
   place-items: center;
-  
 }
 .hide{
   display:none;
@@ -128,7 +127,7 @@ ul{
 }
 .square{
   font-family: Retro;
-  font-size: 6rem;
+  font-size: 5rem;
   background-color:transparent;
   border: 1px solid white;
   color: white;
@@ -145,7 +144,7 @@ ul{
 }
 .nextPlayer{
   font-family: Retro;
-  font-size:2em;
+  font-size:2rem;
   color: white;
 }
 .winner{
@@ -156,5 +155,175 @@ ul{
 }
 .center{
   display:grid;
+  place-items: center;
   
 }
+
+
+
+@media (max-width:600px){
+  .style9{
+    width: 7rem;
+    height: 7rem;
+  }
+  .style16{
+    width: 6rem;
+    height: 6rem;
+  }
+  .style25{
+    width: 6rem;
+    height: 6rem;
+  }
+  .btnReset{
+    font-size:1rem;
+  }
+  .nextPlayer{
+    font-size:1em;
+  }
+  .winner{
+   font-size:2.5rem;
+  }
+  .square{
+    font-size:1rem;
+  }
+  .layout{
+    font-size:1.5rem;
+  }
+  .home{
+    font-size:3rem;
+  }
+  .container{
+    background-size: 22rem;
+  }
+}
+@media (min-width: 600px) and (max-width: 767px){
+  .style9{
+    width: 8rem;
+    height: 8rem;
+  }
+  .style16{
+    width: 9rem;
+    height: 9rem;
+  }
+  .style25{
+    width: 11rem;
+    height: 11rem;
+  }
+  .btnReset{
+    font-size:1.5rem;
+  }
+  .nextPlayer{
+    font-size:1em;
+  }
+  .winner{
+   font-size:3rem;
+  }
+  .square{
+    font-size: 1.5rem;
+  }
+  .layout{
+    font-size:1.8rem;
+  }
+  .home{
+    font-size:7rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 919px) {
+  .style9{
+    width: 10rem;
+    height: 10rem;
+  }
+  .style16{
+    width: 10.5rem;
+    height: 10.5rem;
+  }
+  .style25{
+    width: 12rem;
+    height: 12rem;
+  }
+  .btnReset{
+    font-size:2rem;
+  }
+  .nextPlayer{
+    font-size:1.5rem;
+  }
+  .winner{
+   font-size:3.5rem;
+  }
+  .square{
+    font-size: 2rem;
+  }
+  .layout{
+    font-size:2rem;
+  }
+  .home{
+    font-size:8rem;
+  }
+}
+@media (min-width: 920px) and (max-width: 991px) {
+  .style9{
+    width: 15rem;
+    height: 15rem;
+  }
+  .style16{
+    width: 17rem;
+    height: 17rem;
+  }
+  .style25{
+    width: 17rem;
+    height: 17rem;
+  }
+  .btnReset{
+    font-size:2.5rem;
+  }
+  .nextPlayer{
+    font-size:2rem;
+  }
+  .winner{
+   font-size:4rem;
+  }
+  .square{
+    font-size:3rem;
+  }
+  .layout{
+    font-size:2.8rem;
+  }
+  .home{
+    font-size:8rem;
+  }
+}
+@media (min-width: 992px) and (max-width:1420px){
+  .style9{
+    width: 20rem;
+    height: 20rem;
+  }
+  .style16{
+    width: 21rem;
+    height: 21rem;
+  }
+  .style25{
+    width: 21.5rem;
+    height: 21.5rem;
+  }
+  .btnReset{
+    font-size:2.5rem;
+  }
+  .nextPlayer{
+    font-size:2.5em;
+  }
+  .winner{
+   font-size:4rem;
+  }
+  .square{
+    font-size:4rem;
+  }
+  .layout{
+    font-size:3rem;
+  }
+ 
+}
+@media (min-width:1420px) and (max-width:1600px){
+  .layout{
+    font-size:4rem;
+  }
+} 

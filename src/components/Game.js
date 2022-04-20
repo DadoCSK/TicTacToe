@@ -10,12 +10,27 @@ const Game = ({ value }) => {
 
   const handleClick = (i) => {
     const board = [...tiles];
-    if (winner || board[i]) return;
+    if (winner || board[i]) return ;
     board[i] = xO;
 
     setTiles(board);
     setX(!x);
   };
+
+  function draw(tiles) {
+    for (let i = 0; i < tiles.length; i++) {
+      if (tiles[i] == null) {
+        return false;
+      }
+    }
+    return true;
+  }
+  const getWinner = () => {
+      if(winner) return "Winner:"+winner;
+      else if(draw(tiles)){
+       return "It's a draw!";
+      }else return "Next Player: " + xO;
+  }
 
   const reset = () => {
     setTiles(Array(value).fill(null));
@@ -26,7 +41,7 @@ const Game = ({ value }) => {
       
     <div className="center">
         <div className={winner?'winner':'nextPlayer'}>
-      {winner ? "Winner: " + winner : "Next Player: " + xO}
+        {getWinner()}
         </div>
       <div className={`style${value}`}>
         <Board squares={tiles} onClick={handleClick} />

@@ -24,10 +24,11 @@ const Mode = () => {
     return (
 
         <div>
-            <div className="layout" >
-            <div className={activeClass? 'hide' : 'glitch'}>
-            <h1>CHOOSE MODE</h1>
-            <ul>
+           
+            <div >
+            <div className="layout">
+            <h1 className={activeClass? 'hide' : 'glitch'}>CHOOSE MODE</h1>
+            <ul className={activeClass? 'hide' : 'glitch'}>
                <li ref={gametype1} value="9" onClick = {() =>{
                    setShow(true);
                    setVrednost(gametype1.current.value);
@@ -50,7 +51,7 @@ const Mode = () => {
             {show ? <Game value={vrednost}/> : null}
 
             <button onClick={cMode} className={activeClass?'btnReset':'hide'}>
-          Choose mode
+          Go back
         </button>
          </div>
         </div>
